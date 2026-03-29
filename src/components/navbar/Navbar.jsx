@@ -45,7 +45,9 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a className=" text-3xl text-primary font-bold">DigiTools</a>
+          <a className=" text-3xl font-bold bg-linear-to-r from-[#5039F7] to-[#9416FB] bg-clip-text text-transparent">
+            DigiTools
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -71,7 +73,9 @@ const Navbar = () => {
             <img src={shoppingCart} alt="" />
           </a>
           <a href="">Login</a>
-          <a className="btn btn-primary rounded-full">Get Started</a>
+          <a className="btn bg-linear-to-r from-[#5039F7] to-[#9416FB] text-white rounded-full">
+            Get Started
+          </a>
         </div>
       </div>
     </div>
