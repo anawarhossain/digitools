@@ -1,5 +1,5 @@
 import React from "react";
-import shoppingCart from "../../assets/products/shopping-cart.png"
+import shoppingCart from "../../assets/products/shopping-cart.png";
 
 const Navbar = ({ carts }) => {
   return (
@@ -70,7 +70,11 @@ const Navbar = ({ carts }) => {
         </div>
         <div className="navbar-end gap-3">
           <div className="indicator">
-            <span className="indicator-item badge badge-secondary">{carts.length}</span>
+            <span
+              className={`indicator-item ${carts.length > 0 ? "badge badge-secondary" : null} `}
+            >
+              {carts.length > 0 ? `(${carts.length})` : null}
+            </span>
             <a className="btn" href="">
               <img src={shoppingCart} alt="" />
             </a>
