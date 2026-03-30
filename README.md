@@ -10,9 +10,10 @@ This project leverages the power of modern web development tools to ensure scala
 
 - **Frontend:** [React.js](https://reactjs.org/) (Vite)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/) & [DaisyUI](https://daisyui.com/)
+- **JavaScript:** [JavaScript (ES6+)](https://262.ecma-international.org/6.0/)
 - **Icons:** [Lucide React](https://lucide.dev/)
 - **Notifications:** [React Toastify](https://fkhadra.github.io/react-toastify/)
-- **State Management:** React Hooks (`useState`, `useContext`, `use`)
+- **State Management:** React Hooks (`useState`, `use`)
 
 ---
 
@@ -61,3 +62,4 @@ A fully functional cart management system that allows users to:
 - **X(Twitter):** [Anawar Hossain](https://x.com/MDANAWAR22)
 - **WhatsApp:** [Anawar Hossain](https://wa.me/+8801701020694)
 - **Role:** Junior Developer
+
