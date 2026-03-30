@@ -15,7 +15,7 @@ const Card = ({ carts, setCarts }) => {
         toast.success(`Deleted ${item.name}`);
     }
   return (
-    <div className="container mx-auto p-10 border border-gray-200 rounded-xl min-h-75">
+    <div className="container mx-auto p-7 border border-gray-200 rounded-xl min-h-75">
       <h1 className="text-3xl font-bold mb-6">Your Cart ({carts.length})</h1>
       {carts.length === 0 ? (
         <p className="text-gray-400 text-center">Your cart is empty.</p>

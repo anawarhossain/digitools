@@ -6,7 +6,7 @@ import CreatingIcon from "../../assets/rocket.png";
 const StartStep = () => {
   return (
     <div className="bg-[#f9fafc]">
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto text-center pt-6">
         <h1 className="text-4xl font-bold">Get Started in 3 Steps</h1>
         <span className="text-sm">
           Start using premium digital tools in minutes, not hours.

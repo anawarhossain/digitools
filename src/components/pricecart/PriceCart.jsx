@@ -3,7 +3,7 @@ import { IoCheckmarkSharp } from "react-icons/io5";
 
 const PriceCart = () => {
   return (
-    <div className="container mx-auto text-center">
+    <div className="container mx-auto text-center pt-6 pb-6">
       <h1 className="text-4xl font-bold">Simple, Transparent Pricing</h1>
       <p className="text-sm mb-8">
         Choose the plan that fits your needs. Upgrade or downgrade anytime.

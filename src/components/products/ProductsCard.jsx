@@ -22,10 +22,21 @@ const ProductsCard = ({ data, carts, setCarts }) => {
     false: "bg-linear-to-r from-[#5039F7] to-[#9416FB]",
   };
 
+  const tagStyle = {
+    Free: "badge-accent",
+    Popular: "badge-primary",
+    New: "badge-secondary",
+    default: "badge-warning",
+  };
+
   return (
     <div key={data.id} className="card bg-[#f9fafc] shadow-sm">
-      <div className="card-body">
-        <span className="badge badge-sm badge-warning mb-2">{data.tag}</span>
+      <div className="card-body relative">
+        <span
+          className={`badge badge-sm p-4 absolute right-5 top-5 rounded-full ${tagStyle[data.tag] || tagStyle.default} mb-2`}
+        >
+          {data.tag}
+        </span>
 
         <div className="mb-4">
           {IconComponent ? (
@@ -55,9 +66,9 @@ const ProductsCard = ({ data, carts, setCarts }) => {
         <div className="mt-6">
           <button
             onClick={handleBuy}
-            className={`btn btn-primary btn-block border-none text-white ${buyButtonStyle[isBuy]}`}
+            className={`btn btn-primary rounded-full btn-block border-none text-white ${buyButtonStyle[isBuy]}`}
           >
-            {isBuy ? "Added to car" : "Buy Now"}
+            {isBuy ? "Added to cart" : "Buy Now"}
           </button>
         </div>
       </div>

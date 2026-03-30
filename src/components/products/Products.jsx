@@ -5,7 +5,7 @@ const Products = ({ pricingDataPromise, carts, setCarts }) => {
   const datas = use(pricingDataPromise);
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto pt-6 pb-6">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-10">
         {datas.map((data) => {
           return (

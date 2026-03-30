@@ -25,14 +25,14 @@ function App() {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="">
       <Navbar carts={carts} />
       <Banner />
       <Rating />
 
-      <div className="container mx-auto">
+      <div className="container mx-auto pt-6 pb-6">
         <div className="text-center space-y-4">
-          <h1 className="text-4xl">Premium Digital Tools</h1>
+          <h1 className="text-4xl font-bold">Premium Digital Tools</h1>
           <p className="text-sm text-gray-500">
             Choose from our curated collection of premium digital products
             designed
