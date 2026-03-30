@@ -1,0 +1,93 @@
+
+[
+  {
+    "id": "dt-001",
+    "name": "Basic Toolkit",
+    "description": "Essential digital utilities for casual users and small personal projects.",
+    "price": 0,
+    "period": "one-time",
+    "tag": "Free",
+    "features": [
+      "5 basic conversion tools",
+      "Daily limit: 10 files",
+      "Standard processing speed",
+      "Community support"
+    ],
+    "icon": "Hammer"
+  },
+  {
+    "id": "dt-002",
+    "name": "Creator Pro",
+    "description": "Advanced tools for content creators and digital marketers.",
+    "price": 12,
+    "period": "monthly",
+    "tag": "Popular",
+    "features": [
+      "Unlimited conversions",
+      "Batch processing",
+      "High-speed servers",
+      "Ad-free experience"
+    ],
+    "icon": "Zap"
+  },
+  {
+    "id": "dt-003",
+    "name": "Developer Suite",
+    "description": "A comprehensive set of API-driven tools for modern web development.",
+    "price": 99,
+    "period": "yearly",
+    "tag": "Best Value",
+    "features": [
+      "API Access (10k req/mo)",
+      "JSON/XML formatters",
+      "Secure Webhook testing",
+      "Priority developer support"
+    ],
+    "icon": "Code"
+  },
+  {
+    "id": "dt-004",
+    "name": "Privacy Guard",
+    "description": "Focused on security and metadata cleaning for digital assets.",
+    "price": 25,
+    "period": "one-time",
+    "tag": "Security",
+    "features": [
+      "Exif data remover",
+      "PDF password protection",
+      "Secure file shredder",
+      "Offline mode available"
+    ],
+    "icon": "ShieldCheck"
+  },
+  {
+    "id": "dt-005",
+    "name": "Studio License",
+    "description": "Full access for small teams requiring collaborative digital tools.",
+    "price": 45,
+    "period": "monthly",
+    "tag": "New",
+    "features": [
+      "Up to 5 team members",
+      "Shared workspace",
+      "Custom tool presets",
+      "Team activity logs"
+    ],
+    "icon": "Users"
+  },
+  {
+    "id": "dt-006",
+    "name": "Lifetime Access",
+    "description": "Never pay for another utility again. All current and future tools included.",
+    "price": 199,
+    "period": "one-time",
+    "tag": "Limited",
+    "features": [
+      "Lifetime updates",
+      "Exclusive early access",
+      "All Premium features",
+      "VIP Support line"
+    ],
+    "icon": "Infinity"
+  }
+]
