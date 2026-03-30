@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Banner from "./components/banner/Banner";
 import Footer from "./components/footer/Footer";
@@ -16,14 +17,60 @@ const getPricingData = async () => {
 const pricingDataPromise = getPricingData();
 
 function App() {
+  const [activeTab, setActiveTab] = useState("Products");
+
+  const handleTabChange = (tabName) => {
+    setActiveTab(tabName);
+  };
+
   return (
-    <div>
+    <div className="space-y-6">
       <Navbar />
       <Banner />
       <Rating />
-      
-      <Products pricingDataPromise={pricingDataPromise} />
-      <Card/>
+
+      <div className="container mx-auto">
+        <div className="text-center space-y-4">
+          <h1 className="text-4xl">Premium Digital Tools</h1>
+          <p className="text-sm text-gray-500">
+            Choose from our curated collection of premium digital products
+            designed
+            <br />
+            to boost your productivity and creativity.
+          </p>
+
+          <div className="tabs tabs-box items-center justify-center gap-2 bg-transparent border-none">
+            <input
+              type="radio"
+              name="my_tabs_1"
+              className={`tab btn rounded-full w-32 border-2 transition-all ${
+                activeTab === "Products"
+                  ? "bg-linear-to-r from-[#5039F7] to-[#9416FB] text-white border-transparent" // Active Style
+                  : "btn-outline border-[#5039F7] text-[#5039F7] bg-transparent" // Inactive (Outline) Style
+              }`}
+              aria-label="Products"
+              onClick={() => handleTabChange("Products")}
+              defaultChecked
+            />
+            <input
+              type="radio"
+              name="my_tabs_1"
+              className={`tab btn rounded-full w-32 border-2 transition-all ${
+                activeTab === "Cart"
+                  ? "bg-linear-to-r from-[#5039F7] to-[#9416FB] text-white border-transparent" // Active Style
+                  : "btn-outline border-[#5039F7] text-[#5039F7] bg-transparent" // Inactive (Outline) Style
+              }`}
+              aria-label="Cart"
+              onClick={() => handleTabChange("Cart")}
+            />
+          </div>
+        </div>
+      </div>
+
+      {activeTab === "Products" && (
+        <Products pricingDataPromise={pricingDataPromise} />
+      )}
+      {activeTab === "Cart" && <Card />}
       <StartStep />
       <PriceCart />
       <Workflow />
