@@ -18,6 +18,7 @@ const pricingDataPromise = getPricingData();
 
 function App() {
   const [activeTab, setActiveTab] = useState("Products");
+  const [carts, setCarts] = useState([]);
 
   const handleTabChange = (tabName) => {
     setActiveTab(tabName);
@@ -25,7 +26,7 @@ function App() {
 
   return (
     <div className="space-y-6">
-      <Navbar />
+      <Navbar carts={carts} />
       <Banner />
       <Rating />
 
@@ -60,7 +61,7 @@ function App() {
                   ? "bg-linear-to-r from-[#5039F7] to-[#9416FB] text-white border-transparent" // Active Style
                   : "btn-outline border-[#5039F7] text-[#5039F7] bg-transparent" // Inactive (Outline) Style
               }`}
-              aria-label="Cart"
+              aria-label={`Cart (${carts.length})`}
               onClick={() => handleTabChange("Cart")}
             />
           </div>
@@ -68,9 +69,13 @@ function App() {
       </div>
 
       {activeTab === "Products" && (
-        <Products pricingDataPromise={pricingDataPromise} />
+        <Products
+          pricingDataPromise={pricingDataPromise}
+          carts={carts}
+          setCarts={setCarts}
+        />
       )}
-      {activeTab === "Cart" && <Card />}
+      {activeTab === "Cart" && <Card carts={carts} setCarts={setCarts} />}
       <StartStep />
       <PriceCart />
       <Workflow />

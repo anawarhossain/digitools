@@ -1,18 +1,26 @@
 import React, { useState } from "react";
 import * as LucideIcons from "lucide-react";
+import { toast } from "react-toastify";
 
-const ProductsCard = ({ data }) => {
+const ProductsCard = ({ data, carts, setCarts }) => {
   const [isBuy, setIsBuy] = useState(false);
-    const IconComponent = LucideIcons[data.icon];
-    
-    const handleBuy = () => {
-        setIsBuy(true);
-    }
+  const IconComponent = LucideIcons[data.icon];
 
-    const buyButtonStyle = {
-      true: "bg-linear-to-r from-[#2a014b] to-[#15028f]",
-      false: "bg-linear-to-r from-[#5039F7] to-[#9416FB]",
-    };
+  const handleBuy = () => {
+    setIsBuy(true);
+    const isFound = carts.find(item => item.id === data.id)
+    if (isFound) {
+      toast.error("Item Already in cart")
+      return
+    }
+    setCarts([...carts, data])
+    toast.success("Item add in card");
+  };
+
+  const buyButtonStyle = {
+    true: "bg-linear-to-r from-[#2a014b] to-[#15028f]",
+    false: "bg-linear-to-r from-[#5039F7] to-[#9416FB]",
+  };
 
   return (
     <div key={data.id} className="card bg-[#f9fafc] shadow-sm">
