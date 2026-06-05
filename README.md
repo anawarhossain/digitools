@@ -63,3 +63,13 @@ A fully functional cart management system that allows users to:
 - **WhatsApp:** [Anawar Hossain](https://wa.me/+8801701020694)
 - **Role:** Junior Developer
 
+
+## Live Link
+
+- [Live Link](https://anawarhossain-digitools.netlify.app/)
+
+## Project Screenshot
+
+<p align="center">
+  <img src="public/preview.png" alt="Project Preview" width=" ">
+</p>
